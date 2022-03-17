@@ -5,6 +5,9 @@
 #include <string>
 #include <map>
 
+enum Front {React, Angular};
+enum Back {Node, Ruby};
+
 class Terminal {
     public:
         Terminal();
@@ -12,8 +15,11 @@ class Terminal {
         int Run();
     protected:
     private:
+        Front current_front;
+        Back current_back;
         std::map<std::string, int> commands;
         int RunCommand(std::string cmd);
+
 };
 
 #endif

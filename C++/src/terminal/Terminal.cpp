@@ -3,6 +3,8 @@
 Terminal::Terminal()
 {
     commands["help"] = 1;
+    current_front = React;
+    current_back = Node;
 }
 
 Terminal::~Terminal()
