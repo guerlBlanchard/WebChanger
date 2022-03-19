@@ -3,6 +3,7 @@ services:
   node:
     build:
       context: ./Back/Nodejs
+    # profile: ["node"]
     volumes:
       - ./Back/Nodejs:/src
     command: sh -c "npm i && npm run dev"
@@ -14,6 +15,7 @@ services:
 
   react:
     image: node:14-alpine
+    # profile: ["react"]
     volumes:
       - ./Front/React:/app
     command: sh -c "cd /app && npm i && npm start"
