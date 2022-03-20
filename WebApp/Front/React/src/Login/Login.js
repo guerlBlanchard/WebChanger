@@ -17,6 +17,8 @@ export default class Login extends React.Component {
               <input type="text" placeholder='Username'/>
               <label>Password</label>
               <input type="password" placeholder='Password'/>
+              <input type="submit" value="Login"/>
+              <input type="button" value="Register"/>
             </form>
           </div>
         </header>

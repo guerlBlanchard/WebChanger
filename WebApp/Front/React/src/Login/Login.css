@@ -16,11 +16,12 @@
 .Login-box {
     background-color: #FFFFFF;
     height: 60vh;
-    width: 15vw;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    border: solid;
+    border-width: 1px;
 }
 
 input[type=text], select {
@@ -41,4 +42,34 @@ input[type=password], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 80%;
+    background-color: #ff6414;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
+  
+input[type=submit]:hover {
+  background-color: #ff5500;
+}
+
+input[type=button] {
+    width: 80%;
+    background-color: #ff6414;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+input[type=button]:hover {
+  background-color: #ff5500;
+}
