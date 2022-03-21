@@ -1,8 +1,8 @@
 # WebChanger
 ## Table of Content
-** [RoadMap](#roadmap)
-** [Technologies](#technologies)
-** [Description](#description)
+- [RoadMap](#roadmap)
+- [Technologies](#technologies)
+- [Description](#description)
 
 ## RoadMap
 You can find the current progress of the project [Here](https://trello.com/b/zgJ6ymM9/webchanger-guerlain-blanchard)
