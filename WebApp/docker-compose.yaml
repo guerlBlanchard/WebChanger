@@ -21,3 +21,15 @@ services:
     command: sh -c "cd /app && npm i && npm start"
     ports:
       - "3000:3000"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: post_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+  
+  # mongo:
+    # image: mongo:latest
