@@ -1,6 +1,22 @@
 const db = require('../Init/index');
 const accounts = db.accounts;
 
+/****************************Bcrypt****************************/
+
+const bcrypt = require('bcrypt');
+
+function encrypt_password(password) {
+    bcrypt.hash(password, 10).then(function(hash) {
+        return (hash);
+    });
+}
+
+function cmp_password(password, hash_password) {
+    bcrypt.compare(password, hash_password).then(function(result) {
+        return (result);
+    });
+}
+
 /******************************JWT****************************/
 
 const jwt = require('jsonwebtoken');
@@ -28,7 +44,7 @@ exports.create_account = (req, res) => {
     const new_account = {
         username: req.body.username,
         mail: req.body.mail,
-        password: req.body.password,
+        password: encrypt_password(req.body.password),
     }
 
     if (!req.body.phone) {
@@ -70,11 +86,19 @@ exports.findUser = (req, res) => {
     const mail = req.body.mail;
     const password = req.body.password;
 
-    accounts.findOne({where: {mail: mail, password: password,}})
+    accounts.findOne({where: {mail: mail}})
     .then(rep => {
-        res.json({
-            access_token: jws_create(rep.dataValues.id)
-        });
+        if (cmp_password(password, rep.dataValues.password) == true) {
+            res.json({
+                access_token: jws_create(rep.dataValues.id),
+                expires_in: 3600
+            });
+        }
+        else {
+            res.json({
+                message: "invalid password"
+            });
+        }
     })
     .catch(err => {
         res.send({
