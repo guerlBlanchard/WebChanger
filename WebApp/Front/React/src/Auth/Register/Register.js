@@ -1,5 +1,6 @@
 import React from "react";
 import './Register.css';
+import axios from "axios";
 
 export default class Register extends React.Component{
   constructor (props) {
@@ -15,7 +16,18 @@ export default class Register extends React.Component{
   }
 
   SubmitRegister(event) {
-
+    if (this.state.password != this.state.cpassword)
+      return;
+    axios({
+      method: 'post',
+      url:"http://localhost/user/register",
+      body: {
+        mail: this.state.mail,
+        phone: this.state.phone,
+        username: this.state.username,
+        password: this.state.password
+      }
+    });
   }
 
   render() {
@@ -24,7 +36,7 @@ export default class Register extends React.Component{
         <header className='Register-header'>
           <div className='Register-box'>
             <h1>Register</h1>
-            <form className="Register-form">
+            <form className="Register-form" onSubmit={this.SubmitRegister}>
               <input type='text' placeholder="Email" value={this.state.mail} onChange={(event) => {this.setState({mail: event.target.mail})}}/>
               <input type='text' placeholder="Phone (optionnal)" value={this.state.phone}  onChange={(event) => {this.setState({phone: event.target.phone})}}/>
               <input type="text" placeholder='Username' value={this.state.username}  onChange={(event) => {this.setState({username: event.target.username})}}/>
