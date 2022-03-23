@@ -25,6 +25,16 @@
     border-width: 1px;
 }
 
+.Register-form {
+  background-color: #FFFFFF;
+  height: 60vh;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 input[type=text], select {
   width: 80%;
   padding: 12px;

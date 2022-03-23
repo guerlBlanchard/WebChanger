@@ -12,7 +12,7 @@ export default class Register extends React.Component{
         <header className='Register-header'>
           <div className='Register-box'>
             <h1>Register</h1>
-            <form>
+            <form className="Register-form">
               <input type='text' placeholder="Email"/>
               <input type='text' placeholder="Phone (optionnal)"/>
               <input type="text" placeholder='Username'/>
