@@ -20,7 +20,7 @@ export default class Register extends React.Component{
       return;
     axios({
       method: 'post',
-      url:"http://localhost/user/register",
+      url:"http://localhost:8080/user/register",
       body: {
         mail: this.state.mail,
         phone: this.state.phone,
@@ -28,6 +28,7 @@ export default class Register extends React.Component{
         password: this.state.password
       }
     });
+    event.preventDefault();
   }
 
   render() {

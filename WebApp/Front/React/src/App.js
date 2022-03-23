@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-// import Login from  './Auth/Login/Login'
-import Register from './Auth/Register/Register';
+import Login from  './Auth/Login/Login'
+// import Register from './Auth/Register/Register';
 
 function App() {
   return (
-    <Register />
+    <Login />
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
