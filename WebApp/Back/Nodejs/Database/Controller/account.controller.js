@@ -35,7 +35,7 @@ function jws_retrieve(jws_token) {
 
 /***********************Account creation***********************/
 
-exports.create_account = (req, res) => {
+exports.createAccount = (req, res) => {
     if (!req.body) {
         res.status(400).send({
             message: 'Invalid body'
@@ -82,7 +82,7 @@ exports.create_account = (req, res) => {
 
 /***********************Account retrieve***********************/
 
-exports.findUser = (req, res) => {
+exports.findAccount = (req, res) => {
     const mail = req.body.mail;
     const password = req.body.password;
 
