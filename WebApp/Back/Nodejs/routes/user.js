@@ -6,8 +6,8 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/', controller.findUser);
+router.post('/', controller.findAccount);
 
-router.post('/register', controller.create_account);
+router.post('/register', controller.createAccount);
 
 module.exports = router;
