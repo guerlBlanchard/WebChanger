@@ -1,0 +1,17 @@
+.Home {
+    text-align: center;
+}
+
+.Home-header {
+    height: 10%;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.Home-sidebar {
+    height: 10%;
+    width: 100%;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
