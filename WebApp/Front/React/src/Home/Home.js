@@ -12,7 +12,9 @@ export default class Home extends React.Component {
       <div className='Home'>
         <header className='Home-header'>
           <div className='Home-head-bar'>
-            
+          </div>
+          <div className='Home-sidebar'>
+
           </div>
         </header>
       </div>
