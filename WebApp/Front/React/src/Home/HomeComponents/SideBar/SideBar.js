@@ -1,7 +1,7 @@
 import React from "react";
 import './SideBar.css';
 
-const SideBar = () => {
+function SideBar() {
     return (
         <div className="SideBar">
 

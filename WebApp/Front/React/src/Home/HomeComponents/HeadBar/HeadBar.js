@@ -1,7 +1,7 @@
 import React from "react";
 import './HeadBar.css';
 
-const HeadBar = () => {
+function HeadBar() {
   return (
       <div className="HeadBar">
         <div className="HeadBar-index">
