@@ -2,4 +2,26 @@
     background-color: #D8D8D8;
     height: 7.5vh;
     width: 100vw;
+    display: flex;
+}
+
+.HeadBar-index {
+    width: 80vw;
+    height: 100%;
+}
+
+.HeadBar-account {
+    width: 20vw;
+    height: 100%;
+}
+
+button {
+    width: 40%;
+    background-color: #ff6414;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
