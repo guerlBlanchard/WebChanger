@@ -1,5 +1,14 @@
 version: '3.3'
 services:
+  react:
+    image: node:14-alpine
+    # profile: ["react"]
+    volumes:
+      - ./Front/React:/app
+    command: sh -c "cd /app && npm i && npm start"
+    ports:
+      - "3000:3000"
+
   node:
     build:
       context: ./Back/Nodejs
@@ -14,22 +23,13 @@ services:
       DEBUG: nodejs-docker-express:*
     depends_on:
       - postgres_db
-      - mongo_db
-
-  react:
-    image: node:14-alpine
-    # profile: ["react"]
-    volumes:
-      - ./Front/React:/app
-    command: sh -c "cd /app && npm i && npm start"
-    ports:
-      - "3000:3000"
 
   django:
-    image: python:latest
+    build: 
+      context: ./Back/Python
     volumes:
       - ./Back/Python:/app
-    command: "python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
     depends_on:
