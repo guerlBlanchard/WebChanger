@@ -15,12 +15,16 @@ export default class Login extends React.Component {
   SubmitLogin(event) {
     axios({
       method: 'post',
-      url:"http://localhost:8080/user/login",
+      url:"http://localhost:8080/user/",
       body: {
         username: this.state.username,
         password: this.state.password
       }
-    });
+    }).then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    })
     event.preventDefault();
   }
 
@@ -41,8 +45,8 @@ export default class Login extends React.Component {
 
               <div className='Login-forgot_password'>Forgot password?</div>
               
-              <input type="submit" value="Login"/>
-              
+              <input type="submit" value="Login" onClick={this.SubmitLogin}/>
+
               <a href="http://localhost:3000/Register"><input type="button" value="Register"/></a>
             </form>
 
