@@ -17,4 +17,4 @@ The goal of this project is to improve my skills and knowledge as a fullstack de
 
 This will allow me to discover and master framework required for any future work experiences.
 
-This will also prevent a possible [imposter syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) to develop.
+This will also has the goal to  prevent a possible [imposter syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) to develop.
