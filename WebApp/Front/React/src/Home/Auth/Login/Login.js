@@ -1,18 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import axios from "axios";
 // import { ApiManager } from '../../../ApiManager/ApiManager';
 
 export default function Login() {
-  function SubmitLogin() {
-    
-  }
+  const [box, setBox] = useState(0);
 
-  return (
-    <div className='Login'>
-
-    <header className='Login-header'>
-
+  function loginBox() {
+    return (
       <div className='Login-box'>
 
         <div className='Login-title'><h1>Login</h1></div>
@@ -23,13 +18,32 @@ export default function Login() {
           <input type="password" placeholder='Password' value={this.state.password} onChange={(event) => {this.setState({password: event.target.password})}}/>
 
           <div className='Login-forgot_password'>Forgot password?</div>
-          
+
           <input type="submit" value="Login" onClick={this.SubmitLogin}/>
 
-          <a href="http://localhost:3000/Register"><input type="button" value="Register"/></a>
+          <input type="button" value="Register" onClick={setBox(1)}/>
         </form>
 
       </div>
+    );
+  }
+
+  function boxContent() {
+    switch (box) {
+      case 0:
+        return (loginBox);
+    
+      default:
+        break;
+    }
+  }
+
+  return (
+    <div className='Login'>
+
+    <header className='Login-header'>
+
+      <boxContent/>
 
     </header>
 
