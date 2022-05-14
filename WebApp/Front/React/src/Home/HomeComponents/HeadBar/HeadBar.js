@@ -10,7 +10,6 @@ function HeadBar() {
         </div>
         <div className="HeadBar-account">
           <a href="http://localhost:3000/Login"><button>Login</button></a>
-          <a href="http://localhost:3000/Register"><button>Register</button></a>
         </div>
       </div>
   )
