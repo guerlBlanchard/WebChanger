@@ -3,7 +3,7 @@ import './Login.css';
 // import { ApiManager } from '../../../ApiManager/ApiManager';
 
 export default function Login() {
-  const [box, setBox] = useState(0);
+  const [box, setBox] = useState(1);
 
   function LoginBox() {
     const [username, setUsername] = useState("");
@@ -23,11 +23,32 @@ export default function Login() {
 
           <input type="submit" value="Login" onClick={console.log("salut")}/>
 
-          <input type="button" value="Register" onClick={console.log("salut")}/>
         </form>
 
       </div>
 
+    );
+  }
+
+  function RegisterBox() {
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [cpassword, setCPassword] = useState("");
+
+    return (
+    <div className='Register-box'>
+      <h1>Register</h1>
+      <form className="Register-form">
+        <input type='text' placeholder="Email" value={email} onChange={(event) => {setEmail({mail: event.target.mail})}}/>
+        <input type='text' placeholder="Phone (optionnal)" value={phone}  onChange={(event) => {setPhone({phone: event.target.phone})}}/>
+        <input type="text" placeholder='Username' value={username}  onChange={(event) => {setUsername({username: event.target.username})}}/>
+        <input type="password" placeholder='Password' value={password}  onChange={(event) => {setPassword({password: event.target.password})}}/>
+        <input type="password" placeholder="Confirm Password" value={cpassword}  onChange={(event) => {setCPassword({cpassword: event.target.cpassword})}}/>
+        <input type="submit" value="Register"/>
+      </form>
+    </div>
     );
   }
 
@@ -37,6 +58,8 @@ export default function Login() {
       case 0:
         return (<LoginBox/>);
     
+      case 1:
+        return (<RegisterBox/>);
       default:
         break;
     }
