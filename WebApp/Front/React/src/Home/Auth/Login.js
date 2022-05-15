@@ -17,7 +17,7 @@ export default function Login() {
         <form onSubmit={console.log("coucou")}>
           <input type="text" placeholder='Username' value={username} onChange={(event) => {setUsername(event.target.username)}}/>
 
-          <input type="password" placeholder='Password' value={password} onChange={(event) => {setUsername(event.target.password)}}/>
+          <input type="password" placeholder='Password' value={password} onChange={(event) => {setPassword(event.target.password)}}/>
 
           <div className='Login-forgot_password'>Forgot password?</div>
 
@@ -38,17 +38,22 @@ export default function Login() {
     const [cpassword, setCPassword] = useState("");
 
     return (
-    <div className='Register-box'>
-      <h1>Register</h1>
-      <form className="Register-form">
-        <input type='text' placeholder="Email" value={email} onChange={(event) => {setEmail({mail: event.target.mail})}}/>
-        <input type='text' placeholder="Phone (optionnal)" value={phone}  onChange={(event) => {setPhone({phone: event.target.phone})}}/>
-        <input type="text" placeholder='Username' value={username}  onChange={(event) => {setUsername({username: event.target.username})}}/>
-        <input type="password" placeholder='Password' value={password}  onChange={(event) => {setPassword({password: event.target.password})}}/>
-        <input type="password" placeholder="Confirm Password" value={cpassword}  onChange={(event) => {setCPassword({cpassword: event.target.cpassword})}}/>
-        <input type="submit" value="Register"/>
-      </form>
-    </div>
+      <div className='Register-box'>
+        <h1>Register</h1>
+        <form onSubmit={console.log("register submited")}>
+          <input type='text' placeholder="Email" value={email} onChange={(event) => {setEmail({mail: event.target.mail})}}/>
+
+          <input type='text' placeholder="Phone (optionnal)" value={phone}  onChange={(event) => {setPhone({phone: event.target.phone})}}/>
+
+          <input type="text" placeholder='Username' value={username}  onChange={(event) => {setUsername({username: event.target.username})}}/>
+
+          <input type="password" placeholder='Password' value={password}  onChange={(event) => {setPassword({password: event.target.password})}}/>
+
+          <input type="password" placeholder="Confirm Password" value={cpassword}  onChange={(event) => {setCPassword({cpassword: event.target.cpassword})}}/>
+
+          <input type="submit" value="Register"/>
+        </form>
+      </div>
     );
   }
 
