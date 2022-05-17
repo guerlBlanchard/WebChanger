@@ -1,32 +1,23 @@
 import React, { useState } from 'react';
-import './Login.css';
+import './Auth.css';
 // import { ApiManager } from '../../../ApiManager/ApiManager';
 
-export default function Login() {
-  const [box, setBox] = useState(1);
+export default function Auth() {
+  const [box, setBox] = useState(0);
 
   function LoginBox() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    return (
-      <div className='Login-box'>
+    return (            
+            <form onSubmit={console.log("coucou")}>
+              <input type="text" placeholder='Username' value={username} onChange={(event) => {setUsername(event.target.username)}}/>
 
-        <div className='Login-title'><h1>Login</h1></div>
+              <input type="password" placeholder='Password' value={password} onChange={(event) => {setPassword(event.target.password)}}/>
 
-        <form onSubmit={console.log("coucou")}>
-          <input type="text" placeholder='Username' value={username} onChange={(event) => {setUsername(event.target.username)}}/>
+              <input type="submit" value="Login" onClick={console.log("salut")}/>
 
-          <input type="password" placeholder='Password' value={password} onChange={(event) => {setPassword(event.target.password)}}/>
-
-          <div className='Login-forgot_password'>Forgot password?</div>
-
-          <input type="submit" value="Login" onClick={console.log("salut")}/>
-
-        </form>
-
-      </div>
-
+            </form>
     );
   }
 
@@ -38,8 +29,6 @@ export default function Login() {
     const [cpassword, setCPassword] = useState("");
 
     return (
-      <div className='Register-box'>
-        <h1>Register</h1>
         <form onSubmit={console.log("register submited")}>
           <input type='text' placeholder="Email" value={email} onChange={(event) => {setEmail({mail: event.target.mail})}}/>
 
@@ -53,7 +42,6 @@ export default function Login() {
 
           <input type="submit" value="Register"/>
         </form>
-      </div>
     );
   }
 
@@ -72,11 +60,21 @@ export default function Login() {
   }
 
   return (
-    <div className='Login'>
+    <div className='Auth'>
 
-    <header className='Login-header'>
+    <header className='Auth-header'>
 
-      <BoxContent/>
+      <div className='Auth-box'>
+
+        <div className='Auth-title'><h1>Login</h1></div>
+
+        <div className='Auth-form'>
+
+          <BoxContent/>
+
+        </div>
+        
+      </div>
 
     </header>
 

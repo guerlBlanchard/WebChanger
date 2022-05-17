@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './Home/Home';
-import Login from './Home/Auth/Login'
+import Auth from './Home/Auth/Auth'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route,} from "react-router-dom";
 
@@ -10,7 +10,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />}/>
-      <Route path='/Login' element={<Login/>}/>
+      <Route path='/Auth' element={<Auth/>}/>
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
