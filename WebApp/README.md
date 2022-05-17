@@ -16,5 +16,3 @@ Until further news, the github profile feature will be put on hold.
 The goal of this project is to improve my skills and knowledge as a fullstack developper.
 
 This will allow me to discover and master framework required for any future work experiences.
-
-This will also has the goal to  prevent a possible [imposter syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) to develop.
