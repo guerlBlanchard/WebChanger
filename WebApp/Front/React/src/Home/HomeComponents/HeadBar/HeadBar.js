@@ -9,7 +9,7 @@ function HeadBar() {
           <FaHome className="homeIcon"/>
         </div>
         <div className="HeadBar-account">
-          <a href="http://localhost:3000/Login"><button>Login</button></a>
+          <a href="http://localhost:3000/Auth"><button>Login</button></a>
         </div>
       </div>
   )
