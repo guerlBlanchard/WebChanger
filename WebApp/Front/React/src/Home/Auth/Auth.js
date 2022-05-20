@@ -11,6 +11,7 @@ export default function Auth() {
 
     return (            
             <form onSubmit={console.log("coucou")}>
+
               <input type="text" placeholder='Username' value={username} onChange={(event) => {setUsername(event.target.username)}}/>
 
               <input type="password" placeholder='Password' value={password} onChange={(event) => {setPassword(event.target.password)}}/>
@@ -66,6 +67,7 @@ export default function Auth() {
 
       <div className='Auth-box'>
 
+        <input type='checkbox' className='Auth-switch'></input>
         <div className='Auth-title'><h1>Login</h1></div>
 
         <div className='Auth-form'>
