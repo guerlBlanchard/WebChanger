@@ -3,7 +3,7 @@ import './Auth.css';
 // import { ApiManager } from '../../../ApiManager/ApiManager';
 
 export default function Auth() {
-  const [box, setBox] = useState(0);
+  const [box, setBox] = useState(false);
 
   function LoginBox() {
     const [username, setUsername] = useState("");
@@ -48,16 +48,10 @@ export default function Auth() {
 
   function BoxContent() {
     console.log(box);
-    switch (box) {
-      case 0:
-        return (<LoginBox/>);
-    
-      case 1:
-        return (<RegisterBox/>);
-      default:
-        break;
+    if (!box) {
+      return (<LoginBox/>);
     }
-    return (<div></div>);
+    return (<RegisterBox/>);
   }
 
   return (
@@ -71,17 +65,15 @@ export default function Auth() {
 
           <input type='checkbox' className='Auth-checkbox' id='Slider-switch'/>
 
-          <label className='Auth-switch-label' for="Slider-switch">
+          <label className='Auth-switch-label' for="Slider-switch" onClick={() => setBox(!box)}>
 
-            <span className='Auth-switch-off'></span>
+            <span className='Auth-switch-left'></span>
 
-            <span className='Auth-switch-on'></span>
+            <span className='Auth-switch-right'></span>
 
           </label>
 
         </div>
-
-        <div className='Auth-title'><h1>Login</h1></div>
 
         <div className='Auth-form'>
 
