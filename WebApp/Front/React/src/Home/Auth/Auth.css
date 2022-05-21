@@ -23,6 +23,20 @@
     border-radius: 10px;
 }
 
+.Auth-checkbox {
+  display: none;
+}
+
+.Auth-switch {
+  border: none;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 125px;
+}
+
 input[type=text], select {
   width: 80%;
   padding: 12px;
@@ -57,6 +71,7 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #ff5500;
 }
+
 /* 
 .Login-forgot_password {
   font-size: 15px;

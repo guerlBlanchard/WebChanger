@@ -67,7 +67,12 @@ export default function Auth() {
 
       <div className='Auth-box'>
 
-        <input type='checkbox' className='Auth-switch'></input>
+        <div className='Auth-switch'>
+
+          <input type='checkbox' className='Auth-checkbox'/>
+
+        </div>
+
         <div className='Auth-title'><h1>Login</h1></div>
 
         <div className='Auth-form'>
