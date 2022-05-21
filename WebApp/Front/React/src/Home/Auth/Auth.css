@@ -23,6 +23,8 @@
     border-radius: 10px;
 }
 
+/* Auth switch  */
+
 .Auth-checkbox {
   display: none;
 }
@@ -36,6 +38,76 @@
   user-select: none;
   width: 125px;
 }
+
+.Auth-switch-label {
+  border: 2px solid #666;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+}
+
+.Auth-switch-off {
+  display: block;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+  width: 200%;
+}
+
+.Auth-switch-off:before,
+.Auth-switch-off:after {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  width: 50%;
+}
+
+
+.Auth-switch-off:before {
+  background-color: #66bb6a;
+  color: #fff;
+  content: "ACCEPTED";
+  padding-left: .75em;
+}
+
+.Auth-switch-off:after {
+  background-color: #eee;
+  color: #666;
+  content: "DECLINED";
+  padding-right: .75em;
+  text-align: right;
+}
+
+.Auth-switch-on {
+  background-color: #66bb6a;
+  border: 2px solid #666;
+  border-radius: 20px;
+  bottom: 0;
+  display: block;
+  margin: 5px;
+  position: absolute;
+  right: 91px;
+  top: 0;
+  transition: all 0.3s ease-in 0s; 
+  width: 20px;
+}
+
+.Auth-checkbox:checked + .Auth-switch-label .Auth-switch-off {
+  margin-left: 0;
+}
+
+.Auth-checkbox:checked + .Auth-switch-label .Auth-switch-on {
+  background-color: #eee;
+  right: 0; 
+}
+
+/* input component */
 
 input[type=text], select {
   width: 80%;
