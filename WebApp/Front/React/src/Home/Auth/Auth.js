@@ -67,9 +67,9 @@ export default function Auth() {
 
           <label className='Auth-switch-label' for="Slider-switch" onClick={() => setBox(!box)}>
 
-            <span className='Auth-switch-left'></span>
+            <span className='Auth-switch-inner'></span>
 
-            <span className='Auth-switch-right'></span>
+            <span className='Auth-switch-bubble'></span>
 
           </label>
 
