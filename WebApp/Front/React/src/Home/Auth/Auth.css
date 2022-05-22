@@ -48,64 +48,43 @@
   overflow: hidden;
 }
 
-.Auth-switch-left {
-  display: block;
-  margin-left: -100%;
-  transition: margin 0.3s ease-in 0s;
-  width: 200%;
-}
-
-.Auth-switch-left:before,
-.Auth-switch-left:after {
-  box-sizing: border-box;
-  display: block;
-  float: left;
-  font-size: 14px;
-  font-weight: bold;
+.Auth-switch-label > label.Auth-switch-inner {
+  margin: 0px;
+  width: 140px;
   height: 30px;
-  line-height: 30px;
-  padding: 0;
-  width: 50%;
-}
-
-.Auth-switch-left:before {
-  background-color: #ff5500;
-  color: #fff;
-  content: "REGISTER";
-  padding-left: .75em;
-  text-align: left;
-}
-
-.Auth-switch-left:after {
-  background-color: #eee;
-  color: #666;
-  content: "LOGIN";
-  padding-right: .75em;
-  text-align: right;
-}
-
-.Auth-switch-right {
-  background-color: #ff5500;
-  border: 2px solid #666;
-  border-radius: 20px;
-  bottom: 50px;
+  background: #E0E0E0;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
   display: block;
-  margin: 5px;
+}
+
+
+.Auth-switch-label > label.Auth-switch-inner:before {
+  content: attr(data-on);
   position: absolute;
-  right: 91px;
-  top: 80px;
-  transition: all 0.3s ease-in 0s; 
-  width: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  top: 7px;
+  right: 20px;
 }
 
-.Auth-checkbox:checked + .Auth-switch-label .Auth-switch-left {
-  margin-left: 0;
+.Auth-switch-label > label.Auth-switch-inner:after {
+  content: attr(data-off);
+  width: 70px;
+  height: 16px;
+  background: #fff;
+  border-radius: 26px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 6px -2px #111;
+  padding: 5px 0px;
 }
 
-.Auth-checkbox:checked + .Auth-switch-label .Auth-switch-right {
-  background-color: #eee;
-  right: 0; 
-}
 
 /* input component */
 
