@@ -64,14 +64,8 @@ export default function Auth() {
         <div className='Auth-switch'>
 
           <input type='checkbox' className='Auth-checkbox' id='Slider-switch'/>
-
-          <label className='Auth-switch-label' for="Slider-switch" onClick={() => setBox(!box)}>
-
-            <span className='Auth-switch-left'>Login</span>
-
-            <span className='Auth-switch-right'>Register</span>
-
-          </label>
+          <label className='Auth-switch-left' for="Slider-switch" onClick={() => setBox(!box)}>Login</label>
+          <label className='Auth-switch-right' for="Slider-switch" onClick={() => setBox(!box)}>Register</label>
 
         </div>
 

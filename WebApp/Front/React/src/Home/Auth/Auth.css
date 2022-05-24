@@ -30,37 +30,20 @@
 }
 
 .Auth-switch {
-  border: none;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  background-color: #ccc;
+  border-radius: 20px;
+  display: inline-block;
   width: 200px;
-}
-
-.Auth-switch-label {
+  height: 34px;
+  position: relative;
+  text-align: center;
+  transition: 600ms ease, color 600ms ease;
+  cursor: pointer;
   margin-top: 80px;
   margin-bottom: 50px;
-  cursor: pointer;
-  display: block;
-  overflow: hidden;
 }
 
-.Auth-switch-label {
-  position: relative;
-  cursor: pointer;
-  height: 34px;
-  width: 100%;
-  background-color: rgb(230, 230, 230);
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 20px;
-}
 
-.span {
-  font-size: 90%;
-}
 
 /* input component */
 
